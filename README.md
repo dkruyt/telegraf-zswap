@@ -4,6 +4,10 @@ A telegraf plugin for zswap statistics
 
 zswap is a Linux kernel feature that provides a compressed write-back cache for swapped pages, as a form of virtual memory compression. Instead of moving memory pages to a swap device when they are to be swapped out, zswap performs their compression and then stores them into a memory pool dynamically allocated in the system RAM. Later writeback to the actual swap device is deferred or even completely avoided, resulting in a significantly reduced I/O for Linux systems that require swapping; the tradeoff is the need for additional CPU cycles to perform the compression.
 
+# Grafana screenshot
+
+![Grafana screenshot zswap](https://github.com/dkruyt/telegraf-zswap/raw/master/screenshot-grafana-zswap.jpg)
+
 # Measurements
 
 Measurement names:
