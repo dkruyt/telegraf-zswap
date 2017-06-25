@@ -2,5 +2,4 @@
 
 cd /sys/kernel/debug/zswap
 
-grep . * |  awk -F":" '{print "zswap "$1"="$2}'
-
+echo -n "zswap " ;grep . * |  awk -F":" '{printf $1"="$2","}' | sed 's/,$/\n/'
